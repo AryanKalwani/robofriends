@@ -11,7 +11,7 @@ export const setSearchField = (text) => ({
 
 export const requestRobots = () => (dispatch) =>{
 	dispatch({ type: REQUEST_ROBOTS_PENDING})
-	fetch('https://jsonplaceholder.typicode.com/users',mode:'cors')
+	fetch('https://jsonplaceholder.typicode.com/users',{mode:'no-cors'})
 			.then(response => {
 				return response.json();
 			})
